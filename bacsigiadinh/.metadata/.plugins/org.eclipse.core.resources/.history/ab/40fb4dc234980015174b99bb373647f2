@@ -1,0 +1,5 @@
+package mta.th10.bacsigiadinh.models;
+
+public class MyBaseItem {
+	private boolean isFavorite;
+}

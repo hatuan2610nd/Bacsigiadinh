@@ -1,0 +1,31 @@
+package com.mta.th10.bacsigiadinh.fragments;
+
+import com.google.android.gms.maps.SupportMapFragment;
+import com.mta.th10.bacsigiadinh.MainActivity;
+import com.mta.th10.bacsigiadinh.R;
+import com.mta.th10.bacsigiadinh.helpers.ITitleFragment;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class TimNhaThuocFragment extends Fragment implements ITitleFragment,OnMapReadyCallback  {
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = inflater.inflate(R.layout.fragment_main_timnhathuoc, null);
+		   SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+	                .findFragmentById(R.id.map);
+	        mapFragment.getMapAsync(this);
+		
+		return v;
+	}
+
+	@Override
+	public String getTitle() {
+		return "Tìm nhà thuốc";
+	}
+	
+}

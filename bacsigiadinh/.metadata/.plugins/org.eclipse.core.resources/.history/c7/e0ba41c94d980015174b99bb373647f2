@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/bmi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Chỉ số cơ thể của bạn"
+        android:textSize="30sp" 
+        android:textStyle="bold"
+        />
+
+    <GridLayout
+        android:id="@+id/bmi_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmi_title"
+        android:layout_centerHorizontal="true"
+        android:columnCount="3"
+        android:rowCount="2" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="Chiều cao:" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="Cân nặng:" />
+
+        <EditText
+            android:id="@+id/txt_bmi_chieucao"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0" />
+
+        <EditText
+            android:id="@+id/txt_bmi_cannang"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:text="(m)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="(kg)" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/bmi_bt_tinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmi_input"
+        android:layout_centerHorizontal="true"
+        android:text="TÍNH TOÁN" />
+
+    <View
+        android:id="@+id/bmi_range"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/bmi_bt_tinh"
+        android:background="@drawable/view_bmi_range" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmi_bt_tinh"
+        android:text="x" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmi_range"
+        android:padding="7dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@android:color/holo_green_dark"
+                android:gravity="right"
+                android:text="thông tin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/holo_green_dark"
+                android:gravity="right"
+                android:text="thông tin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/holo_green_dark"
+                android:gravity="right"
+                android:text="thông tin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/holo_green_dark"
+                android:gravity="right"
+                android:text="thông tin" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bmi_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/holo_green_dark"
+            android:text="20,5"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+package com.mta.th10.bacsigiadinh;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+import com.mta.th10.bacsigiadinh.adapters.GridMenuAdapter;
+import com.mta.th10.bacsigiadinh.db.MyDB;
+import com.mta.th10.bacsigiadinh.fragments.TimNhaThuocFragment;
+import com.mta.th10.bacsigiadinh.fragments.TinTucFragment;
+import com.mta.th10.bacsigiadinh.fragments.TinhChiSoFragment;
+import com.mta.th10.bacsigiadinh.fragments.TraCuuBenhFragment;
+import com.mta.th10.bacsigiadinh.fragments.TraCuuThuocFragment;
+import com.mta.th10.bacsigiadinh.fragments.TuThuocFragment;
+import com.mta.th10.bacsigiadinh.tasks.CopyDatabaseTask;
+import com.mta.th10.bacsigiadinh.viewmodels.MainMenuItem;
+
+import android.R.menu;
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
+import android.text.format.Time;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.FrameLayout;
+import android.widget.GridView;
+
+public class MainActivity extends FragmentActivity implements OnItemClickListener {
+
+	private DrawerLayout drawerLayout;
+	private GridView gridview_main_menu;
+	private FrameLayout mainFrameLayout;
+	List<MainMenuItem> menuItems;
+	//private Stack<Fragment> stack;
+	public static MainActivity Current;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		Current = this;
+		
+		
+		new CopyDatabaseTask().execute(this);
+		
+		//stack = new Stack<Fragment>();
+
+		setContentView(R.layout.activity_main);
+
+		drawerLayout = (DrawerLayout) this.findViewById(R.id.drawer_layout);
+		gridview_main_menu = (GridView) this.findViewById(R.id.gridview_main_menu);
+		mainFrameLayout = (FrameLayout) this.findViewById(R.id.fragment_main_view);
+
+		SetupGridViewMenu();
+		
+	}
+
+	private void SetupGridViewMenu() {
+		menuItems = new ArrayList<MainMenuItem>();
+		menuItems.add(new MainMenuItem("Tìm nhà thuốc", R.drawable.ic_nhathuoc, new TimNhaThuocFragment()));
+		menuItems.add(new MainMenuItem("Tin tức", R.drawable.ic_tintuc, new TinTucFragment()));
+		menuItems.add(new MainMenuItem("Tra cứu thuốc", R.drawable.ic_thuoc, new TraCuuThuocFragment()));
+		menuItems.add(new MainMenuItem("Tìm cứu bệnh", R.drawable.ic_benh, new TraCuuBenhFragment()));
+		menuItems.add(new MainMenuItem("Tủ thuốc", R.drawable.ic_bacsi, new TuThuocFragment()));
+		menuItems.add(new MainMenuItem("Chỉ số", R.drawable.ic_congcu, new TinhChiSoFragment()));
+
+		GridMenuAdapter adapter = new GridMenuAdapter(this, R.layout.item_main_menu, menuItems);
+		gridview_main_menu.setAdapter(adapter);
+		gridview_main_menu.setOnItemClickListener(this);
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int pos, long arg3) {
+		MainMenuItem item = menuItems.get(pos);
+		showFragment(item.getFragment());
+		drawerLayout.closeDrawers();
+		//stack.clear();
+	}
+	
+	/**
+	 * Thực hiện các công việc cần đến csdl ở đây
+	 */
+	public void OnCreateDatabaseDone()
+	{
+		getSupportFragmentManager().beginTransaction().replace(R.id.fragment_main_view, new TraCuuThuocFragment())
+		.commit();
+	}
+	
+
+	@Override
+	public void onBackPressed() {
+//		if (stack.size() == 0) {
+//			// Hỏi xem có thoát hay ko
+//			Log.d("Check", "Có thoát ko?");
+//		} else {
+//			Fragment f = stack.pop();
+//			showFragment(f);
+//		}
+	}
+
+	public void pushFragmentToStack(Fragment fragment) {
+		//stack.push(fragment);
+	}
+
+	public void showFragment(Fragment fragment) {
+		Log.d("check show", fragment.getId()+"");
+		getSupportFragmentManager().beginTransaction()
+		.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+		.addToBackStack(fragment.getId()+"")
+		.replace(R.id.fragment_main_view, fragment)
+		.commit();
+	}
+
+	public void showFragment(Fragment currentFrag, Fragment newFrag) {
+		//stack.push(currentFrag);
+		showFragment(newFrag);
+	}
+	
+	
+}

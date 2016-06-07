@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module context="debug_manage_user" name="debug_manage_user" path="E:/[thebrownbox]/bacsigiadinh/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/debug_manage_user" type="j2ee"/>
+</server>

@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head> 
+  <title id="PageTitle">Carbadac</title> 
+  <meta id="PageKeywords" content="thuoc, thuốc, duoc pham, dược phẩm, thuoc tay, thuốc tây, benh, bệnh, y te, y tế, y khoa, y hoc, y học, thong tin thuoc, thông tin thuốc, thong tin duoc pham, thông tin dược phẩm, thong tin y te, thông tin y tế, thong tin benh, thông tin bệnh, thong tin y hoc, thông tin y học, chua benh, chữa bệnh, kham benh, khám bệnh, bac sy, bác sỹ, tu dien thuoc, từ điển thuốc, tu dien benh, từ điển bệnh, danh muc thuoc, danh mục thuốc, danh muc benh, danh mục bệnh, benh vien, bệnh viện, nha thuoc, nhà thuốc, phong kham, phòng khám" name="keywords">  
+  <meta id="PageDescription" name="description" content="Cung cấp thông tin về tất cả các loại thuốc - dược phẩm được phép lưu hành tại Việt nam. Tra cứu thông tin y tế về 10.000 bệnh. Hỗ trợ kê đơn và quản lý bệnh nhân cho Bác sĩ">  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema"> 
+  <link href="hoa.ico" rel="shortcut icon" type="image/x-icon"> 
+  <link href="Styles.css" type="text/css" rel="stylesheet"> 
+  <script language="javascript" src="js/jquery-1.7.1.js"></script> 
+  <script language="javascript" src="js/jquery.cookie.js"></script> 
+  <script language="javascript" src="js/jquery.backtop.js"></script> 
+  <script type="text/javascript" src="js/jquery.autocomplete.js"></script> 
+  <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css"> 
+  <script language="javascript" src="PgUtil.js"></script> 
+  <script language="javascript" src="js/webtoolkit.url.js" type="text/javascript"></script> 
+  <script language="javascript" src="js/AjaxRequest.js"></script> 
+  <script language="javascript" src="js/counter.js" type="text/javascript"></script> 
+  <link rel="stylesheet" type="text/css" href="css/search.css"> 
+  <script language="javascript" src="js/search.js" type="text/javascript"></script> 
+  <script language="javascript" src="js/dhtml-suite.js" type="text/javascript"></script> 
+  <script language="javascript" src="js/win-popup-content.js" type="text/javascript"></script> 
+  <script language="javascript" src="js/auto-save-form.js" type="text/javascript"></script> 
+  <script language="javascript" src="js/check-submit-form.js" type="text/javascript"></script> 
+  <link rel="stylesheet" type="text/css" href="css/panel-layout.css"> 
+  <script language="javascript" src="js/jquery.panel-layout.js"></script> 
+  <script language="javascript" src="js/jquery.toolbar.dock.js"></script> 
+  <script language="javascript" src="js/ga.js"></script> 
+ </head> 
+ <body> 
+  <script language="javascript" type="text/javascript" src="js/wz_tooltip.js"></script> 
+  <form name="Form1" method="post" action="Default.aspx?Mod=ViewDrugs&amp;DrugsID=52483" id="Form1"> 
+   <input type="hidden" name="__VIEWSTATE" value="dDwtMzYwNzg2OTk5O3Q8O2w8aTwxPjtpPDc+Oz47bDx0PHA8bDxpbm5lcmh0bWw7PjtsPENhcmJhZGFjOz4+Ozs+O3Q8O2w8aTwxPjtpPDc+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8cDxsPFRleHQ7PjtsPFw8ZGl2IGNsYXNzPSduYXYtY29udGFpbmVyJ1w+XDxkaXYgY2xhc3M9J25hdi1tYWluJ1w+XDx1bFw+XDxsaSBjbGFzcz0nc3RhcnQnXD5cPGEgaHJlZj0nRGVmYXVsdC5hc3B4P01vZD1OZXdzJ1w+VElOIFThu6hDXDwvYVw+XDwvbGlcPlw8bGlcPlw8YSBocmVmPSdEZWZhdWx0LmFzcHg/TW9kPUNoYXRBcHAnXD5DSOG7oiBUSFXhu5BDXDwvYVw+XDwvbGlcPlw8bGlcPlw8YSBocmVmPSdEZWZhdWx0LmFzcHg/TW9kPUhlYWx0aFNlcnZpY2UnXD5E4buKQ0ggVuG7pCBZIFThur5cPC9hXD5cPC9saVw+XDxsaVw+XDxhIGhyZWY9J0RlZmF1bHQuYXNweD9Nb2Q9SUNEJ1w+SUNELTEwXDwvYVw+XDwvbGlcPlw8bGlcPlw8YSBocmVmPSdEZWZhdWx0LmFzcHg/TW9kPUNsYXNzaWZ5RHJ1Z3MnXD5QSMOCTiBMT+G6oEkgVEhV4buQQ1w8L2FcPlw8L2xpXD5cPGxpXD5cPGEgaHJlZj0nRGVmYXVsdC5hc3B4P01vZD1Db25zdWx0YW50J1w+VMavIFbhuqROXDwvYVw+XDwvbGlcPlw8bGlcPlw8YSBocmVmPSdEZWZhdWx0LmFzcHg/TW9kPVRWT25saW5lJ1w+TzJUViBPbmxpbmVcPC9hXD5cPC9saVw+XDwvdWxcPlw8L2Rpdlw+XDxkaXYgY2xhc3M9J2ZuY21lbnUnXD5cPHNwYW5cPkjhu5YgVFLhu6IgVMOBQyBOR0hJ4buGUFw8aW1nIHNyYz0nSW1hZ2VzXFxVSVxcbWVudS5wbmcnIGNsYXNzPSd0b2dnbGVtZW51J1w+XDwvc3Bhblw+XDwvZGl2XD5cPC9kaXZcPjs+Pjs7Pjs+Pjt0PDtsPGk8MD47aTwxPjs+O2w8dDw7bDxpPDE+O2k8Mz47aTw1PjtpPDc+Oz47bDx0PHA8O3A8bDxvbktleVByZXNzO2F1dG9jb21wbGV0ZTs+O2w8cmV0dXJuIHN1Ym1pdGVudGVyKCdfY3RsMF9idG5Mb2dpbicsZXZlbnQpO29mZjs+Pj47Oz47dDxwPDtwPGw8b25LZXlQcmVzczthdXRvY29tcGxldGU7PjtsPHJldHVybiBzdWJtaXRlbnRlcignX2N0bDBfYnRuTG9naW4nLGV2ZW50KTtvZmY7Pj4+Ozs+O3Q8dDxwPDtwPGw8b25LZXlQcmVzczs+O2w8cmV0dXJuIHN1Ym1pdGVudGVyKCdfY3RsMF9idG5Mb2dpbicsZXZlbnQpOz4+Pjs7Pjs7Pjt0PHA8O3A8bDxvbmNsaWNrOz47bDxyZXR1cm4gY2hlY2tMb2dpbignX2N0bDBfdHh0VXNlck5hbWUnLCdfY3RsMF90eHRQYXNzd29yZCcsJ19jdGwwX2RkbFR5cGUnKTs+Pj47Oz47Pj47dDw7bDxpPDE+Oz47bDx0PHA8bDxUZXh0Oz47bDxcZTs+Pjs7Pjs+Pjs+Pjs+Pjs+PjtsPF9jdGwxOmJ0blNlbmRDb250YWN0Oz4+ej3HRgLx64hmFzY40/7a5+dBcmo="> 
+   <script language="javascript" type="text/javascript" src="js/jquery.pill-tab.js?v=20140902"></script> 
+   <link rel="stylesheet" type="text/css" href="css/pill-tab.css?v=20140902"> 
+   <table height="100%" cellspacing="0" cellpadding="0" width="1002" align="center" bgcolor="#ffffff" border="0"> 
+    <tbody>
+     <tr height="1"> 
+      <td> 
+       <div id="header"> 
+        <div class="left"> 
+         <div>
+          <a href="http://www.thuoc.vn">www.thuoc.vn</a>
+         </div> 
+         <img src="images/UI/logo.gif" border="0"> 
+        </div> 
+        <div class="right"> 
+         <div id="searchbox"> 
+          <div class="wrap"> 
+           <div class="filter"> 
+            <a href="#" rel="fd" class="active">Thuốc</a> 
+            <a href="#" rel="fa">Bệnh</a> 
+            <a href="#" rel="fi">Hình ảnh y khoa</a> 
+            <a href="#" rel="fh">Hồ sơ y tế</a> 
+           </div> 
+           <div class="control"> 
+            <div class="keyword">
+             <input type="text" id="q" name="q">
+            </div> 
+            <div class="search">
+             <input type="button" id="go" name="go" value="Tìm kiếm">
+            </div> 
+           </div> 
+           <div class="option"> 
+            <div id="fd" class="show"> 
+             <input id="rdTN" type="radio" value="TN" name="ofd">
+             <label for="rdTN">Tên thuốc</label> 
+             <input id="rdDK" type="radio" value="DK" name="ofd">
+             <label for="rdDK">Số đăng ký</label> 
+             <input id="rdTP" type="radio" value="TP" name="ofd">
+             <label for="rdTP">Thành phần</label> 
+             <input id="rdTT" type="radio" value="TT" name="ofd">
+             <label for="rdTT">Tương tác thuốc</label> 
+            </div> 
+            <div id="fa"> 
+             <input id="rdSEARCHARTICLES" type="radio" value="SEARCHARTICLES" name="ofa">
+             <label for="rdSEARCHARTICLES">Bài viết</label> 
+             <input id="rdSEARCHVIDEO" type="radio" value="SEARCHVIDEO" name="ofa">
+             <label for="rdSEARCHVIDEO">Video</label> 
+             <input id="rdSEARCHICD" type="radio" value="SEARCHICD" name="ofa">
+             <label for="rdSEARCHICD">ICD-10</label> 
+             <input id="rdSEARCHSERVICE" type="radio" value="SEARCHSERVICE" name="ofa">
+             <label for="rdSEARCHSERVICE">Dịch vụ y tế</label> 
+             <input id="rdSEARCHTESTINDEX" type="radio" value="SEARCHTESTINDEX" name="ofa">
+             <label for="rdSEARCHTESTINDEX">Xét nghiệm</label> 
+            </div> 
+            <div id="fi"> 
+             <input id="rdATLAS" type="radio" value="ATLAS" name="ofi">
+             <label for="rdATLAS">Hình ảnh Giải phẫu - Atlas</label> 
+             <input id="rdOTHER" type="radio" value="OTHER" name="ofi" style="display:none">
+             <label for="rdOTHER" style="display:none">Khác</label> 
+            </div> 
+            <div id="fh"> 
+             <label>Ví dụ: 0912345678abcd</label> 
+            </div> 
+           </div> 
+           <div class="dbinfo"></div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="topBanner"></div> 
+       <div class="nav-container">
+        <div class="nav-main">
+         <ul>
+          <li class="start"><a href="Default.aspx?Mod=News">TIN TỨC</a></li>
+          <li><a href="Default.aspx?Mod=ChatApp">CHỢ THUỐC</a></li>
+          <li><a href="Default.aspx?Mod=HealthService">DỊCH VỤ Y TẾ</a></li>
+          <li><a href="Default.aspx?Mod=ICD">ICD-10</a></li>
+          <li><a href="Default.aspx?Mod=ClassifyDrugs">PHÂN LOẠI THUỐC</a></li>
+          <li><a href="Default.aspx?Mod=Consultant">TƯ VẤN</a></li>
+          <li><a href="Default.aspx?Mod=TVOnline">O2TV Online</a></li>
+         </ul>
+        </div>
+        <div class="fncmenu">
+         <span>HỖ TRỢ TÁC NGHIỆP<img src="Images\UI\menu.png" class="togglemenu"></span>
+        </div>
+       </div> </td> 
+     </tr> 
+     <tr height="*"> 
+      <td valign="top"> 
+       <div id="pagecontainer"> 
+        <table height="100%" cellspacing="0" cellpadding="0" width="100%" border="0"> 
+         <tbody>
+          <tr> 
+           <td id="leftPanel"> <span id="lblMain"></span> 
+            <div class="qa_form"> 
+             <div class="form_header"> 
+              <div>
+               CÂU HỎI HOẶC Ý KIẾN CỦA BẠN VỀ CHỦ ĐỀ NÀY
+              </div> 
+             </div> 
+             <div class="form_alert">
+              <span id="_ctl1_lblMessenger"></span>
+             </div> 
+             <center> 
+              <table border="0"> 
+               <tbody>
+                <tr> 
+                 <td><span>Họ và tên <i>(yêu cầu)</i></span> <input name="_ctl1:txtFullName" type="text" id="_ctl1_txtFullName"><span>Địa chỉ</span> <input name="_ctl1:txtAddress" type="text" id="_ctl1_txtAddress"><span>Điện thoại <i>(không hiển thị)</i></span> <input name="_ctl1:txtTel" type="text" id="_ctl1_txtTel"><span>Email <i>(không hiển thị)</i></span> <input name="_ctl1:txtEmail" type="text" id="_ctl1_txtEmail"> 
+                  <div class="captcha"> 
+                   <div>
+                    <span>Nhập mã bảo mật (hình bên dưới)</span> 
+                    <img src="JpegImage.aspx"> 
+                    <input name="_ctl1:txtCaptcha" type="text" id="_ctl1_txtCaptcha" class="captcha_input">
+                   </div> 
+                  </div> </td> 
+                 <td><span>Nội dung <i>(yêu cầu)</i></span> <textarea name="_ctl1:txtContent" rows="17" id="_ctl1_txtContent"></textarea></td> 
+                </tr> 
+               </tbody>
+              </table> 
+             </center> 
+             <div class="form_button">
+              <input type="image" name="_ctl1:btnSendContact" id="_ctl1_btnSendContact" src="Images/pill/send.jpg" alt="" border="0">
+             </div> 
+             <div class="form_note">
+              (Lưu ý: Thuốc Net có thể biên tập lại nội dung mà vẫn giữ nguyên ý và không bảo đảm đăng tải mọi ý kiến gửi về.) 
+             </div> 
+            </div> </td> 
+           <td id="rightPanel"> 
+            <div class="nav-sub">
+             Cho thành viên Thuốc Net
+            </div> 
+            <div id="login"> 
+             <div class="row"> 
+              <label>Tên đăng nhập</label> 
+              <input name="_ctl0:txtUserName" type="text" id="_ctl0_txtUserName" class="acc" onkeypress="return submitenter('_ctl0_btnLogin',event)" autocomplete="off"> 
+             </div> 
+             <div class="row"> 
+              <label>Mật khẩu</label> 
+              <input name="_ctl0:txtPassword" type="password" id="_ctl0_txtPassword" class="acc" onkeypress="return submitenter('_ctl0_btnLogin',event)" autocomplete="off"> 
+             </div> 
+             <div class="row"> 
+              <label>Chức năng</label> 
+              <select name="_ctl0:ddlType" id="_ctl0_ddlType" class="type" onkeypress="return submitenter('_ctl0_btnLogin',event)"> <option selected value=""></option> <option value="BACSY">Bác sỹ</option> <option value="NHATHUOC">Nhà thuốc</option> <option value="TRINHDUOC">Trình dược viên</option> <option value="LETAN">Lễ tân/Thu ngân Bệnh viện</option> <option value="YTA">Y tá/Điều dưỡng Bệnh viện</option> <option value="HOSOYTE">Hồ sơ y tế điện tử</option> <option value="QUANLYBENHVIEN">Quản lý bệnh viện</option> <option value="CHAT">Chợ thuốc</option> </select> 
+             </div> 
+             <div class="row"> 
+              <label></label>&nbsp; 
+              <input type="submit" name="_ctl0:btnLogin" value="Đăng nhập" id="_ctl0_btnLogin" class="login" onclick="return checkLogin('_ctl0_txtUserName','_ctl0_txtPassword','_ctl0_ddlType')"> 
+              <a href="Default.aspx?Mod=Page&amp;Name=RegistrationSelector" class="reg">Đăng ký sử dụng</a> 
+             </div> 
+            </div> <span id="mycart"> </span> <span id="lblConcern5"></span> <span id="lblConcern4"></span> <span id="lblConcern1"></span> <span id="lblConcern2"></span> <span id="lblConcern3"></span> <span id="lblNewClip"></span> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div></td> 
+     </tr> 
+     <tr height="1"> 
+      <td> 
+       <div id="bottomBanner"> 
+        <a href="Default.aspx?Mod=TV&amp;ChannelID=1"><img src="Uploads/hop-tac-voi-vtv2.jpg" alt="Hợp tác với chương trình Sức khoẻ cho mọi người - VTV2"></a> 
+        <a href="Default.aspx?Mod=Page&amp;Name=HealthCareService"><img src="Uploads/dich-vu-kham-suc-khoe.jpg" alt="Dịch vụ khám sức khoẻ"></a> 
+        <a href="Default.aspx?Mod=ServicesAtHome"><img src="Uploads/dk-xetnghiemtainha.jpg" alt="Dịch vụ lấy mẫu và trả kết quả xét nghiệm tại nhà"></a> 
+        <a href="Default.aspx?Mod=AppointmentForm"><img src="Uploads/dk-khambenh.jpg" alt="Đăng ký khám và chữa bệnh tại các bệnh viện"></a> 
+        <a href="Default.aspx?Mod=AppointmentForm"><img src="Uploads/dk-xetnghiem.jpg" alt="Đăng ký làm xét nghiệm tại các bệnh viện"></a> 
+        <a href="Default.aspx?Mod=MemberCard"><img src="Uploads/thuocnetmember.jpg" alt="Thẻ chăm sóc sức khoẻ"></a> 
+       </div> 
+       <div id="footer"> 
+        <div class="link"> 
+         <div> 
+          <a href="Default.aspx?Mod=Page&amp;Name=About">Giới thiệu</a> 
+          <a href="Default.aspx?Mod=Page&amp;Name=Products">Sản phẩm</a> 
+          <a href="Default.aspx?Mod=Page&amp;Name=RegistrationSelector">Đăng ký sử dụng</a> 
+          <a href="Default.aspx?Mod=Contact">Liên hệ</a> 
+         </div> 
+        </div> 
+        <div> 
+         <div class="left"> 
+          <b>THUỐC - DƯỢC PHẨM - Y TẾ VIỆT NAM</b>
+          <br> Giấy phép của Bộ Văn hóa Thông tin số 122/GP-BC cấp ngày 09/05/2006
+          <br> Địa chỉ: 18/27 Xuân Diệu, Quận Tây Hồ, TP.Hà Nội, Việt Nam
+          <br> Điện thoại: (04) 35 765 990 / Fax: (04) 35 765 990
+          <br> Phụ trách kỹ thuật: Công ty Cổ phần Thương mại &amp; Ứng dụng công nghệ cao Ánh Sáng (ASC)
+          <br> Đại diện độc quyền khai thác thương mại: Công ty Cổ phần Kết Nối Y Tế 
+         </div> 
+         <div class="right"> 
+          <b>KHUYẾN CÁO</b>
+          <br> 
+          <div class="alert">
+           Thông tin tại Website chỉ mang tính chất tham khảo, việc dùng thuốc và chữa bệnh phải tuân theo sự hướng dẫn của Bác sỹ.
+          </div> Website sử dụng tốt trên trình duyệt Firefox và màn hình có độ phân giải 1024x768 pixels trở lên 
+         </div> 
+        </div> 
+       </div> 
+       <div class="linkgroup"> 
+        <div>
+          Hệ thống websites: 
+         <a href="http://yte.net.vn" target="_blank">www.<span>YTe</span>.net.vn</a> + 
+         <a href="http://thuoc.vn" target="_blank">www.<span>Thuoc</span>.vn</a> + 
+         <a href="http://henkhambenh.vn" target="_blank">www.<span>HenKhamBenh</span>.vn</a> + 
+         <a href="http://dieuduongchuyennghiep.vn" target="_blank">www.<span>DieuDuongChuyenNghiep</span>.vn</a> + 
+         <a href="http://bacsy.net.vn" target="_blank">www.<span>BacSy</span>.net.vn</a> 
+        </div> 
+       </div></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <script language="javascript" type="text/javascript" src="js/jquery.ajaxtip.js?v=20140902"></script> 
+   <link rel="stylesheet" type="text/css" href="css/jquery.ajaxtip2.css?v=20140902"> 
+   <script language="Javascript">AjaxCall('Ajax/Default.aspx?Mod=ViewDrugs&DrugsID=52483', 'lblMain');</script> 
+   <script language="Javascript">AjaxCall('Ajax/Default.aspx?Mod=Concern&DrugsID=52483&With=Drugs', 'lblConcern1');</script> 
+   <script language="Javascript">AjaxCall('Ajax/Default.aspx?Mod=Concern&DrugsID=52483&With=Articles', 'lblConcern2');</script> 
+   <script language="Javascript">AjaxCall('Ajax/Default.aspx?Mod=Concern&DrugsID=52483&With=News', 'lblConcern3');</script> 
+   <script language="Javascript">AjaxCall('Ajax/Default.aspx?Mod=ViewAdvertisement', 'topBanner');</script> 
+  </form>   
+ </body>
+</html>

@@ -1,0 +1,78 @@
+package com.mta.th10.bacsigiadinh.fragments;
+
+import java.util.ArrayList;
+
+import org.simpleframework.xml.Serializer;
+import org.simpleframework.xml.core.Persister;
+
+import com.mta.th10.bacsigiadinh.MainActivity;
+import com.mta.th10.bacsigiadinh.R;
+import com.mta.th10.bacsigiadinh.adapters.RssAdapter;
+import com.mta.th10.bacsigiadinh.helpers.ITitleFragment;
+import com.mta.th10.bacsigiadinh.tasks.LoadRssDataTask;
+import com.mta.th10.bacsigiadinh.viewmodels.Rss;
+import com.mta.th10.bacsigiadinh.viewmodels.RssItem;
+
+import android.app.ProgressDialog;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+
+public class TinTucFragment extends Fragment implements ITitleFragment {
+	public static final String url = "http://www.vnexpress.net/rss/suc-khoe.rss";
+
+	private static Rss rss;
+
+	private ProgressDialog dialog;
+	private ListView listview;
+	private RssAdapter adapter;
+
+	public TinTucFragment() {
+
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = inflater.inflate(R.layout.fragment_main_tintuc, container, false);
+		MainActivity.Current.updateTitle(this);
+		listview = (ListView) v.findViewById(R.id.rss_listview);
+		adapter = new RssAdapter(getContext(), R.layout.item_rss, new ArrayList<RssItem>());
+		listview.setAdapter(adapter);
+		// tai trang
+		if (rss == null) {
+			new LoadRssDataTask().execute(this);
+			dialog = ProgressDialog.show(getActivity(), "Tải dữ liệu", "Đang tải");
+			dialog.setCancelable(false);
+		} else {
+			HienThiDuLieu();
+		}
+
+		return v;
+	}
+
+	@Override
+	public String getTitle() {
+		return "Tin tức";
+	}
+
+	public void LoadDataXong(Rss rss) {
+		this.rss = rss;
+		dialog.dismiss();
+		HienThiDuLieu();
+	}
+
+	public void HienThiDuLieu() {
+		if (rss == null) {
+			Log.d("test", "ko được");
+		} else {
+			adapter.clear();
+			adapter.addAll(this.rss.getChannel().getItems());
+			adapter.notifyDataSetChanged();
+		}
+	}
+
+}

@@ -1,0 +1,181 @@
+package com.mta.th10.bacsigiadinh.fragments;
+
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.android.volley.Request.Method;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.mta.th10.bacsigiadinh.R;
+import com.mta.th10.bacsigiadinh.helpers.MyHelper;
+import com.mta.th10.bacsigiadinh.helpers.MyGPS;
+import com.mta.th10.bacsigiadinh.helpers.MyMap;
+import com.mta.th10.bacsigiadinh.tasks.AppController;
+import com.mta.th10.bacsigiadinh.viewmodels.NhaThuoc;
+import com.mta.th10.bacsigiadinh.viewmodels.RootObject;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import mta.th10.bacsigiadinh.interfaces.ITitleFragment;
+
+public class TimNhaThuocFragment extends Fragment implements ITitleFragment, Response.Listener<JSONObject>,
+		Response.ErrorListener, OnConnectionFailedListener, ConnectionCallbacks, OnMapReadyCallback {
+	private GoogleApiClient mGoogleApiClient;
+	MyGPS myGPS;
+	GoogleMap map;
+	List<Marker> markers = null;
+	Map<Marker, NhaThuoc> mar_nha = new HashMap<Marker, NhaThuoc>();
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = inflater.inflate(R.layout.fragment_main_timnhathuoc, null);
+
+		getActivity().runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
+						.findFragmentById(R.id.map);
+				mapFragment.getMapAsync(this);
+
+				myGPS = new MyGPS(getActivity());
+
+				mGoogleApiClient = new GoogleApiClient.Builder(getActivity()).addApi(Places.GEO_DATA_API)
+						.addApi(Places.PLACE_DETECTION_API).addConnectionCallbacks(this)
+						.addOnConnectionFailedListener(this).build();
+			}
+		});
+
+		return v;
+	}
+
+	@Override
+	public String getTitle() {
+		return "Tìm nhà thuốc";
+	}
+
+	@Override
+	public void onMapReady(GoogleMap map) {
+		this.map = map;
+
+		map.setMyLocationEnabled(true);
+		map.getUiSettings().setZoomControlsEnabled(true);
+
+		LatLng myLocation = myGPS.getMyLocation();
+
+		if (myLocation != null) {
+			CameraPosition cameraPosition = new CameraPosition.Builder().target(myLocation).zoom(15).build();
+			map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+		} else {
+			MyHelper.Log("onMapReady", "myLocation is NULL");
+		}
+
+		String url = MyMap.getQueryString(myLocation);
+		JsonObjectRequest request = new JsonObjectRequest(Method.GET, url, null, this, this);
+		MyHelper.Log("test", myLocation.toString());
+		AppController.getInstance().addToRequestQueue(request);
+
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+		mGoogleApiClient.connect();
+	}
+
+	@Override
+	public void onStop() {
+		mGoogleApiClient.disconnect();
+		super.onStop();
+	}
+
+	@Override
+	public void onResponse(JSONObject object) {
+		RootObject root = new RootObject();
+
+		try {
+			root.setStatus(object.getString("status"));
+			JSONArray results = object.getJSONArray("results");
+
+			for (int i = 0; i < results.length(); i++) {
+				JSONObject node = (JSONObject) results.get(i);
+				NhaThuoc x = new NhaThuoc();
+
+				x.setId(node.getString("id"));
+				x.setName(node.getString("name"));
+				x.setAddress(node.getString("formatted_address"));
+
+				double lng = node.getJSONObject("geometry").getJSONObject("location").getDouble("lng");
+				double lat = node.getJSONObject("geometry").getJSONObject("location").getDouble("lat");
+				x.setLocation(new LatLng(lat, lng));
+
+				JSONArray array = node.getJSONArray("types");
+				List<String> types = new ArrayList<String>();
+				for (int j = 0; j < array.length(); j++)
+					types.add(array.getString(j));
+				x.setTypes(types);
+
+				root.getResults().add(x);
+
+			}
+
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		markers = new ArrayList<Marker>();
+		for (int i = 0; i < root.getResults().size(); i++) {
+			MarkerOptions o = new MarkerOptions();
+			NhaThuoc nt = root.getResults().get(i);
+			o.position(nt.getLocation());
+			o.title(nt.getName());
+
+			Marker currentMarker = map.addMarker(o);
+			markers.add(currentMarker);
+			mar_nha.put(currentMarker, nt);
+			currentMarker.showInfoWindow();
+
+		}
+
+	}
+
+	@Override
+	public void onConnected(Bundle arg0) {
+	}
+
+	@Override
+	public void onConnectionSuspended(int arg0) {
+	}
+
+	@Override
+	public void onConnectionFailed(ConnectionResult arg0) {
+	}
+
+	@Override
+	public void onErrorResponse(VolleyError arg0) {
+	}
+
+}

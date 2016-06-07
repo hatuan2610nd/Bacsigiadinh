@@ -1,0 +1,13 @@
+package mta.th10.bacsigiadinh.models;
+
+public class MyBaseItem {
+	private boolean isFavorite;
+
+	public boolean isFavorite() {
+		return isFavorite;
+	}
+
+	public void setFavorite(boolean isFavorite) {
+		this.isFavorite = isFavorite;
+	}
+}

@@ -1,0 +1,68 @@
+package com.mta.th10.bacsigiadinh.fragments;
+
+import com.mta.th10.bacsigiadinh.R;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import mta.th10.bacsigiadinh.interfaces.ITitleFragment;
+
+public class TinhChiSoFragment extends Fragment implements ITitleFragment {
+	Button bt;
+	TextView txt_diem;
+	TextView txt_thongBao;
+	
+	TextView txt_chieucao;
+	TextView txt_cannang;
+	
+
+	String l1 = "GẦY: Nguy cơ thiếu dinh dưỡng và loãng xương!";
+	String L0 = "KHOE MẠNH!";
+	String h1 = "THỪA CÂN!";
+	String h2 = "BÉO PHÌ! Nguy cơ mắc bệnh về tim mạch, huyết áp cao, đột quỵ, tiểu đường,...";
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = inflater.inflate(R.layout.fragment_main_tinhchiso, container, false);
+		bt = (Button) v.findViewById(R.id.bmi_bt_tinh);
+		txt_diem = (TextView) v.findViewById(R.id.bmi_result);
+		txt_thongBao = (TextView) v.findViewById(R.id.txt_ketqua);
+		txt_chieucao = (TextView) v.findViewById(R.id.txt_bmi_chieucao);
+		txt_cannang = (TextView) v.findViewById(R.id.txt_bmi_cannang);
+		bt.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				
+				int chieuCao = Integer.parseInt(txt_chieucao.getText().toString());
+				int canNang = Integer.parseInt(txt_cannang.getText().toString());
+				
+				
+				
+			}
+		});
+		
+		return v;
+	}
+
+	@Override
+	public String getTitle() {
+		return "Chỉ số BMI";
+	}
+
+	@Override
+	public void onStart() {
+		Log.d("xxxxx", "onStart");
+		super.onStart();
+	}
+
+	@Override
+	public void onStop() {
+		Log.d("xxxxx", "onStop");
+		super.onStop();
+	}
+}

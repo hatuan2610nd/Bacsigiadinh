@@ -1,0 +1,1 @@
+﻿- Có một vấn đề về việc liên kết các bảng này với nhau

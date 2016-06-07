@@ -1,0 +1,36 @@
+1444741758051	Delete element
+1444747407779	Move file
+1444748713028	Rename resource 'color'
+1444750155168	Rename type 'MenuItem'
+1444753960903	Encapsulate field 'fragment'
+1444759431936	Rename package 'com.mta.th10.bacsigiadinh.models'
+1444844941078	Move compilation unit
+1444844949488	Move compilation unit
+1444844955891	Move compilation unit
+1444845038678	Rename resource 'fragment_timnhathuoc.xml'
+1444845051181	Rename resource 'fragment_tinhchiso.xml'
+1444845057101	Rename resource 'fragment_tintuc.xml'
+1444845064187	Rename resource 'fragment_tracuubenh.xml'
+1444845070979	Rename resource 'fragment_tracuuthuoc.xml'
+1444845077944	Rename resource 'fragment_tuthuoc.xml'
+1444846255236	Delete element
+1444847425754	Delete element
+1444848855750	Delete elements
+1444880615429	Delete element
+1444897866156	Delete element
+1444957001949	Rename package 'com.mta.th10.bacsigiadinh.interfaces'
+1444957131613	Rename type 'IHasTitle'
+1444957148362	Delete element
+1444957214986	Delete element
+1444957227316	Rename type 'NhomThuocAdapter'
+1444957643398	Delete elements
+1444962607734	Rename resource 'fragment_listview.xml'
+1444962700622	Rename resource 'fragment_listbenh.xml'
+1444964353482	Rename field 'listNhomThuoc'
+1444965387175	Delete element
+1444965474276	Move compilation unit
+1444965483768	Rename package 'com.mta.th10.bacsigiadinh.controllers'
+1445036295733	Rename type 'IMyFragment'
+1445065114624	Rename type 'MyImage'
+1445065316704	Rename type 'MyChannel'
+1445066755785	Rename type 'LoadRssData'

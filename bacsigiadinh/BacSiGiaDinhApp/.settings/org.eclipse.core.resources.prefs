@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/com/mta/th10/bacsigiadinh/MainActivity.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/adapters/GroupItemAdapter.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/db/MyDB.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/TimNhaThuocFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/TinTucFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/TinhChiSoFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/TraCuuBenhFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/TraCuuThuocFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/sub/ChiTietBaiBaoFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/sub/ChiTietBenhFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/fragments/sub/DanhSachBenhFragment.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/helpers/MyGPS.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/tasks/CopyDatabaseTask.java=UTF-8
+encoding//src/com/mta/th10/bacsigiadinh/viewmodels/RssItem.java=UTF-8

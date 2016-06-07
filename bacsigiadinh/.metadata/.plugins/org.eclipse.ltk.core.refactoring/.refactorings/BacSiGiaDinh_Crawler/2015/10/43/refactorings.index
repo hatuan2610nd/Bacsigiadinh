@@ -1,0 +1,13 @@
+1445437788936	Rename type 'Student'
+1445437811909	Rename field 'name'
+1445437833352	Rename field 'maxNumberStudent'
+1445438228418	Encapsulate field 'diemThi'
+1445438364154	Delete element
+1445438393775	Encapsulate field 'danhsach'
+1445438679993	Rename field 'danhsach'
+1445439602935	Encapsulate field 'bangDiem'
+1445441233946	Rename compilation unit 's.java'
+1445592371789	Delete element
+1445592374287	Delete element
+1445592376310	Delete element
+1445604327727	Rename resource 'test.txt'

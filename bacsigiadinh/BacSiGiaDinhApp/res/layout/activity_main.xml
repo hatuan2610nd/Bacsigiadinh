@@ -1,0 +1,51 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:background="@android:color/white"
+        android:id="@+id/fragment_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <!--  -->
+
+    <RelativeLayout
+        android:id="@+id/main_menu"
+        android:layout_width="@dimen/size_main_menu_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/bg" >
+
+        <ImageView
+            android:id="@+id/image_home"
+            android:layout_width="@dimen/size_main_menu_width"
+            android:layout_height="@dimen/main_menu_image_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_home" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/image_home"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white" />
+
+        <GridView
+            android:id="@+id/gridview_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line"
+            android:gravity="center"
+            android:numColumns="2"
+            android:paddingTop="8dp"
+            android:verticalSpacing="2dp"
+             >
+        </GridView>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

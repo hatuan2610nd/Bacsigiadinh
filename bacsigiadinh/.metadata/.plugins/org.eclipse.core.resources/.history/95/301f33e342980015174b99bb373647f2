@@ -1,0 +1,16 @@
+package mta.th10.bacsigiadinh.models;
+
+public abstract class MyBaseItem {
+	private boolean isFavorite;
+
+	public boolean isFavorite() {
+		return isFavorite;
+	}
+
+	public void setFavorite(boolean isFavorite) {
+		this.isFavorite = isFavorite;
+	}
+	
+	public abstract String getX();
+	
+}

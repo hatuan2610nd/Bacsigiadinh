@@ -1,0 +1,22 @@
+package com.mta.th10.bacsigiadinh.fragments.sub;
+
+import android.support.v4.app.Fragment;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import mta.th10.bacsigiadinh.interfaces.ITitleFragment;
+
+public class DanhSachFavFragment  extends Fragment implements OnItemClickListener, ITitleFragment {
+
+	@Override
+	public String getTitle() {
+		return "Note";
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
